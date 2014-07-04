@@ -74,6 +74,13 @@ class CompaniesController < ApplicationController
     end
     
     def get_parent
-      @parents = Company.all
+      if @company.present?
+        arr = []
+        arr << @company.id
+        arr << @company.descendant_ids if @company.descendant_ids.present?
+        @parents = Company.where.not(id: arr)
+      else
+        @parents = Company.all
+      end
     end
 end

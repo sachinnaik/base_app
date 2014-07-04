@@ -1,0 +1,9 @@
+<tr>
+  <td><%= company.name %></td>
+  <td><%= company.about %></td>
+  <td><%= company.active %></td>
+  <td><%= company.parent.name if company.parent %></td>
+  <td><%= link_to 'Show', company %></td>
+  <td><%= link_to 'Edit', edit_company_path(company) %></td>
+  <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>

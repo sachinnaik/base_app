@@ -14,11 +14,12 @@
   <strong>Active:</strong>
   <%= @company.active %>
 </p>
-
+<% if @company.parent %>
 <p>
   <strong>Parent:</strong>
-  <%= @company.parent_id %>
+  <%= @company.parent.name %>
 </p>
+<% end %>
 
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Back', companies_path %>
