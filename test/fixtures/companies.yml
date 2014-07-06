@@ -1,12 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  id: 1
+  name: Sodexo UK 
   about: MyText
-  active: false
-  parent_id: 1
+  active: active
+  parent_id: 
 
 two:
+  id: 2
   name: MyString
   about: MyText
   active: false
