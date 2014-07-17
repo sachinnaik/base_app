@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140706091439) do
+ActiveRecord::Schema.define(version: 20140709121838) do
 
   create_table "companies", force: true do |t|
     t.string   "name"
@@ -24,6 +24,21 @@ ActiveRecord::Schema.define(version: 20140706091439) do
   end
 
   add_index "companies", ["ancestry"], name: "index_companies_on_ancestry"
+
+  create_table "menus", force: true do |t|
+    t.string   "controller"
+    t.string   "action"
+    t.boolean  "is_active",  default: true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "roles", force: true do |t|
+    t.string   "name"
+    t.integer  "company_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
