@@ -40,5 +40,5 @@ gem 'spring',        group: :development
 
 gem 'ancestry'
 gem 'devise'
-gem 'rspec'
+gem 'rspec', group: [:development, :test]
 

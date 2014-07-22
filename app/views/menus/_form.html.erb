@@ -10,7 +10,11 @@
       </ul>
     </div>
   <% end %>
-
+  
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
   <div class="field">
     <%= f.label :controller %><br>
     <%= f.text_field :controller %>
@@ -22,6 +26,10 @@
   <div class="field">
     <%= f.label :is_active %><br>
     <%= f.check_box :is_active %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><label>Only integer (1-master, 2-transactions, 3-other)</label><br>
+    <%= f.text_field :type %> 
   </div>
   <div class="actions">
     <%= f.submit %>

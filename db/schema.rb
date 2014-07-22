@@ -26,8 +26,10 @@ ActiveRecord::Schema.define(version: 20140709121838) do
   add_index "companies", ["ancestry"], name: "index_companies_on_ancestry"
 
   create_table "menus", force: true do |t|
+    t.string   "name"
     t.string   "controller"
     t.string   "action"
+    t.integer  "type"
     t.boolean  "is_active",  default: true
     t.datetime "created_at"
     t.datetime "updated_at"

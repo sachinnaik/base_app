@@ -11,6 +11,7 @@ class CompaniesController < ApplicationController
   # GET /companies/1
   # GET /companies/1.json
   def show
+    render layout: "application"
   end
 
   # GET /companies/new
@@ -20,6 +21,7 @@ class CompaniesController < ApplicationController
 
   # GET /companies/1/edit
   def edit
+    render layout: "application"
   end
 
   # POST /companies

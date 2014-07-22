@@ -13,6 +13,7 @@
   <tbody>
     <% @menus.each do |menu| %>
       <tr>
+        <td><%= menu.name %></td>
         <td><%= menu.controller %></td>
         <td><%= menu.action %></td>
         <td><%= menu.is_active %></td>
