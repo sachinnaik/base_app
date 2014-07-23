@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140709121838) do
+ActiveRecord::Schema.define(version: 20140723130139) do
 
   create_table "companies", force: true do |t|
     t.string   "name"
@@ -31,6 +31,18 @@ ActiveRecord::Schema.define(version: 20140709121838) do
     t.string   "action"
     t.integer  "type"
     t.boolean  "is_active",  default: true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "permissions", force: true do |t|
+    t.integer  "menu_id"
+    t.integer  "role_id"
+    t.boolean  "view",       default: false
+    t.boolean  "add",        default: false
+    t.boolean  "modify",     default: false
+    t.boolean  "del",        default: false
+    t.boolean  "print",      default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
