@@ -40,5 +40,8 @@ gem 'spring',        group: :development
 
 gem 'ancestry'
 gem 'devise'
-gem 'rspec', group: [:development, :test]
+
+group :development, :test do
+  gem 'rspec-rails'
+end
 
