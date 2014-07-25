@@ -30,6 +30,7 @@ class RolesController < ApplicationController
       if @role.save
         format.html { redirect_to @role, notice: 'Role was successfully created.' }
         format.json { render :show, status: :created, location: @role }
+        # Also fetch permissions new on this page to assign permission to this role.
       else
         format.html { render :new }
         format.json { render json: @role.errors, status: :unprocessable_entity }
